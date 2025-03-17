@@ -5,7 +5,6 @@ import java.io.File;
 
 public class Runner {
 
-    // Main method checks for the required filename argument.
     public static void main(String[] args) {
         if (args.length == 0) {
             System.err.println("Usage: java Runner <filename>");
@@ -23,12 +22,10 @@ public class Runner {
                     .storingInto("./outputs")
                     .withName("Island")
                     .fire();
-        } catch(Exception e) {
+        } catch (Exception e) {
             System.err.println(e.getMessage());
             e.printStackTrace(System.err);
             System.exit(1);
         }
     }
 }
-
-
