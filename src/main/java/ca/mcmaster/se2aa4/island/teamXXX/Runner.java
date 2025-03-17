@@ -1,12 +1,16 @@
 package ca.mcmaster.se2aa4.island.teamXXX;
 
 import static eu.ace_design.island.runner.Runner.run;
-
 import java.io.File;
 
 public class Runner {
 
+    // Main method checks for the required filename argument.
     public static void main(String[] args) {
+        if (args.length == 0) {
+            System.err.println("Usage: java Runner <filename>");
+            System.exit(1);
+        }
         String filename = args[0];
         try {
             run(Explorer.class)
@@ -25,5 +29,6 @@ public class Runner {
             System.exit(1);
         }
     }
-
 }
+
+
